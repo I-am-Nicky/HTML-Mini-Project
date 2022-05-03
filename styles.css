@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+html{
+    --soft-blue: hsl(215, 51%, 70%);
+    ---soft-blue: hsl(215, 51%, 70%);
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0, 100%);
+    font-family: "Outfit", sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+    --font-size-heading: 2.2rem;
+    --font-size-body: 1.8rem;
+    --font-size-other: 1.5rem;
+    --line-height-heading: 2.8rem;
+    --line-height-body: 2.6rem;
+
+}
+body{
+    background:var(--very-dark-blue-main);
+    width:100%;
+    place-items: center;
+    padding:2rem;
+    min-height:100vh;
+    display: grid;
+    }
+
+.nft-card{
+    padding: 2.4rem;
+  background: var(--very-dark-blue-card);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 2.4rem;
+  width: 90%;
+  max-width: 32.7rem;
+  transition: max-width 250ms ease;
+}
+.img-container{
+    place-items:center;
+    border-radius:0.9rem;
+    display:grid;
+    width:100%;
+    overflow:hidden;
+    transition:transition: max-width 250ms ease;
+    cursor:pointer;
+}
+.img-container img.cube{
+place-items:center;
+width:100%;
+height:100%;
+}
+
+.img-container img.eye{
+    width:4.2em;
+    opacity:0;
+    transition:opacity 250ms ease;
+    z-index:var(--eye);
+}
+
+.img-container:hover img.eye{
+ opacity:1;
+}
+
+.img-container:hover::before {
+    opacity: 50%;
+  }
+
+  .img-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--cyan);
+    z-index: var(--overlay);
+    opacity: 0;
+    transition: opacity 250ms ease;
+  }
+
+  .text-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    align-items: start;
+    gap: 1.2rem;
+  }
+  @media only screen and (min-width: 768px) {
+    .text-container {
+      gap: 1.6rem;
+    }
+  }
+
+  .divider{
+      border-bottom:solid ;
+  }
+
+  .user-info p{
+    text-align: center;
+
+  }
+
